@@ -17,8 +17,8 @@ settings_dict = {
     "TOKEN": {
         "NOTION":
         'secret_013tQKTmEmdOOWcBgcPBTKNN3wAOzgQhTSkN2t63M2U',  # Notionのトークン
-        "DISCORD":
-        'MTIzNDAxMTkxMTgyNjE4MjIxOA.GZl6T7.lJzT2LvCLpN1MRUzzYG_h1MlJUzniOE26bqVyg',  # Discordのトークン(Java)
+        # "DISCORD":
+        # 'MTIzNDAxMTkxMTgyNjE4MjIxOA.GZl6T7.lJzT2LvCLpN1MRUzzYG_h1MlJUzniOE26bqVyg',  # Discordのトークン(Java)
         # 'MTA5ODEwNDI1OTkyNjU3MzA3Ng.GV4SGN.VioIFVMRIsJ-PXlc45wecvdi-X2QPYSep-_e70',  # Discordのトークン(Python)
     },
     "GUILD_ID": {
