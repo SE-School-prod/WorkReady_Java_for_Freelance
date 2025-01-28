@@ -84,10 +84,10 @@ from settings.role_id_dict import role_id_dict
 
 # logger = logging.getLogger()
 
-intents = discord.Intents.default()
-intents.members = True
-# bot = commands.Bot(command_prefix='/', intents=discord.Intents.all())
-bot = commands.Bot(command_prefix='/', intents=intents)
+# intents = discord.Intents.default()
+# intents.members = True
+bot = commands.Bot(command_prefix='/', intents=discord.Intents.all())
+# bot = commands.Bot(command_prefix='/', intents=intents)
 client = discord.Client(intents=discord.Intents.all())
 
 
