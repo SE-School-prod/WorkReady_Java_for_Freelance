@@ -23,7 +23,8 @@ settings_dict = {
     },
     "GUILD_ID": {
         "GUILD": 1229973127270891540,  # DiscordのWorkReadyチャットグループID
-        "BOT": 1234011911826182218,  # 「DiscortionJava」BOTのメッセージID
+        # "BOT": 1234011911826182218,  # 「DiscortionJava」BOTのメッセージID
+        "BOT": 1335433826071216138,  # 「DiscortionJava2」BOTのメッセージID
         "CHANNEL_ID_DAILY_REPORT": 1229973127304581149,  # daily report
         "CHANNEL_ID_BOT_TRAIN": 1236765890691989597,  # bot_train
         # "CHANNEL_ID_DOC_COMPLETE": 1161660408457867345,  # Wiki読了報告
