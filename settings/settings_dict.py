@@ -53,11 +53,11 @@ settings_dict = {
         },
         "UDEMY": {
             "MIN": 6,
-            "MAX": 141
+            "MAX": 367
         },
         "PORTOFOLIO": {
-            "MIN": 142,
-            "MAX": 149
+            "MIN": 368,
+            "MAX": 375
         }
     },
     "CURRICULUM_GUIDELINE_DATE_RANGE": {
