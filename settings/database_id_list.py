@@ -96,4 +96,19 @@ instructor_id_list = {
         "mail": "shoumatakanami@gmail.com",
         "id": "ce7db7c620974f5fa6a6275f0259e0dd",
     },
+    "00004": {
+        "name": "鶴田鉱海",
+        "mail": "bearbook0613@gmail.com",
+        "id": "19e795f96fce8196a5a9d3994fc87db6",
+    },
+    "00005": {
+        "name": "佐藤大文",
+        "mail": "hirom115033@gmail.com",
+        "id": "1a2795f96fce81f9a8cfc538bafd0b0d",
+    },
+    "00006": {
+        "name": "松村遼河",
+        "mail": "ry0ga132@gmail.com",
+        "id": "1a2795f96fce8157b9c0e5246c1bceb7",
+    },
 }
