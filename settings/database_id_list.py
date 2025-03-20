@@ -66,7 +66,7 @@ database_id_list = {
     "00024": "19b6de70ecf04fa383b639c90186ce0c",  # 佐藤祐平様
     "00025": "ef1826b407d748919ff51322151e8ca1",  # 株式会社鈴菊HD様
     "00026": "aae626f3df8f4f3cb4423772a025d987",  # Assh様
-    "00027": "6ce33427a01c4132ad10ca6ec9afbdfc",  # 株式会社RESTA
+    "00027": "6ce33427a01c4132ad10ca6ec9afbdfc",  # 株式会社RESTA様
     "00028": "15f795f96fce81da8f81d0a7592b2a9a",  # 中村　勇真様
     "00029": "16f795f96fce81a7b3fff05e5dbcfacc",  # 秋山美里様
     "00030": "190795f96fce81e8b6d6ffcb02c86b32",  # 鈴木郁哉様 
