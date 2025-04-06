@@ -81,11 +81,11 @@ instructor_id_list = {
         "mail": None,
         "id": "366f97862ac54ffdb341fb08301015b9",
     },
-    "00001": {
-        "name": "中村勇真",
-        "mail": "yu.nakamura@east-cloud.jp",
-        "id": "7576752eac874b1790bba86dbc4e0bd8",
-    },
+    # "00001": {
+    #     "name": "中村勇真",
+    #     "mail": "yu.nakamura@east-cloud.jp",
+    #     "id": "7576752eac874b1790bba86dbc4e0bd8",
+    # },
     # "00002": {
     #     "name": "渡邊一生",
     #     "mail": "issei.watanabe0806@gmail.com",
