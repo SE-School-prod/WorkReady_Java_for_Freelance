@@ -148,13 +148,13 @@ def main():
             #     await confirm_ticket(after, logger, guild)
             #     logger.info('END コマンド入力: {}'.format(after))
 
-        # elif (after.author.display_name[-3:] == "@運営") or (after.author.id == settings_dict["GUILD_ID"]["BOT"]):
-        #     if (before.channel.id == settings_dict["GUILD_ID"]["CHANNEL_ID_BOT_TRAIN"]) or (before.channel.id == settings_dict["GUILD_ID"]["CHANNEL_ID_ENOROLLMENT_STATUS"]):
-        #         guild = discord.utils.get(
-        #             bot.guilds, id=settings_dict["GUILD_ID"]["GUILD"])
-        #         logger.info('START コマンド入力: {}'.format(after))
-        #         await change_enrollment_status(after, logger, guild)
-        #         logger.info('END コマンド入力: {}'.format(after))
+        elif (after.author.display_name[-3:] == "@運営") or (after.author.id == settings_dict["GUILD_ID"]["BOT"]):
+            if (before.channel.id == settings_dict["GUILD_ID"]["CHANNEL_ID_BOT_TRAIN"]) or (before.channel.id == settings_dict["GUILD_ID"]["CHANNEL_ID_ENOROLLMENT_STATUS"]):
+                guild = discord.utils.get(
+                    bot.guilds, id=settings_dict["GUILD_ID"]["GUILD"])
+                logger.info('START コマンド入力: {}'.format(after))
+                await change_enrollment_status(after, logger, guild)
+                logger.info('END コマンド入力: {}'.format(after))
         
         # ロールが講師の場合
         # if after.author.get_role(role_id_dict["講師"]) != None:
@@ -218,13 +218,13 @@ def main():
             #     logger.info('END コマンド入力: {}'.format(message))
 
         # 運営の場合かボットの場合
-        # elif (message.author.display_name[-3:] == "@運営") or (message.author.id == settings_dict["GUILD_ID"]["BOT"]):
-        #     if (message.channel.id == settings_dict["GUILD_ID"]["CHANNEL_ID_BOT_TRAIN"]) or (message.channel.id == settings_dict["GUILD_ID"]["CHANNEL_ID_ENOROLLMENT_STATUS"]):
-        #         guild = discord.utils.get(
-        #             bot.guilds, id=settings_dict["GUILD_ID"]["GUILD"])
-        #         logger.info('START コマンド入力: {}'.format(message))
-        #         await change_enrollment_status(message, logger, guild)
-        #         logger.info('END コマンド入力: {}'.format(message))
+        elif (message.author.display_name[-3:] == "@運営") or (message.author.id == settings_dict["GUILD_ID"]["BOT"]):
+            if (message.channel.id == settings_dict["GUILD_ID"]["CHANNEL_ID_BOT_TRAIN"]) or (message.channel.id == settings_dict["GUILD_ID"]["CHANNEL_ID_ENOROLLMENT_STATUS"]):
+                guild = discord.utils.get(
+                    bot.guilds, id=settings_dict["GUILD_ID"]["GUILD"])
+                logger.info('START コマンド入力: {}'.format(message))
+                await change_enrollment_status(message, logger, guild)
+                logger.info('END コマンド入力: {}'.format(message))
         
         # ロールが講師の場合
         # if message.author.get_role(role_id_dict["講師"]) != None:
