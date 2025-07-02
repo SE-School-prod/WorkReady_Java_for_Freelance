@@ -14,7 +14,7 @@ import platform
 import pytz
 
 from settings.settings_dict import settings_dict
-from settings.database_id_list import database_id_list
+from settings.database_id_list import database_id_list, instructor_id_list
 from error_handling.error_message import ErrorMessage
 from .notion import Notion
 from .change_roll import check_cariculam
@@ -149,6 +149,11 @@ async def change_enrollment_status(message, logger, guild):
                             notion.update(page_id=page_id,
                                           filter_dicts_list=filter_dicts_list)
 
+                        instructor_page_id = get_instructor_page_id(message, user_id)
+
+                        if instructor_page_id is not None:
+                            notion.update(page_id=instructor_page_id,filter_dicts_list=[{"在籍状況": enrollment_status}])
+
                         ## 返信処理 ##
                         # 受講中以外は解約のURLを返信する
                         if enrollment_status == "受講中" or enrollment_status == "転職済":
@@ -200,3 +205,30 @@ async def change_enrollment_status(message, logger, guild):
         logger.error(e)
 
     logger.info("END change_enrollment_status")
+
+
+def get_instructor_page_id(message, user_id):
+
+    print(f"get_instructor_page_id: {message}, {user_id}")
+
+    notion = Notion()
+    instructor_id = None
+    page_id = None
+
+    member = discord.utils.get(message.guild.members, id=int(user_id))
+
+    for had_role in member.roles:
+        role_name = had_role.name
+        if role_name[:2] == "講師":
+            print("構成ロール名: ", role_name)
+            instructor_id_key = role_name[2:7]
+            instructor_id = instructor_id_list[instructor_id_key]["id"]
+            break
+
+    if instructor_id is not None:
+        filter_dict = {'ユーザーID': user_id}
+
+        results_id = notion.select(instructor_id, filter_dict)
+        page_id = results_id[0]["id"]
+
+    return page_id
